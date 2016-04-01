@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import math
+import sys
 
 
 def get_prime_list(total):
@@ -66,6 +67,10 @@ def get_value(string, char_prime):
 def main():
     list_prime = get_prime_list(52)
     char_prime = get_char_prime(list_prime)
+    if char_prime is None:
+        print 'char_prime is None, System Exit'
+        sys.exit(0)
+
     print char_prime
 
     string_1 = 'abasdsaefqwwerlasldfnAADAABADFADldfalnflkasndflkansdflkjaslfdsadfasdfasfas'
