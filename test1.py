@@ -58,11 +58,9 @@ def get_value(string, char_prime):
     :return: 素数相乘的值
     """
     num = 1
-    list_char = []
     for i in string:
-        if i in char_prime and i not in list_char:
+        if i in char_prime and num % char_prime[i] != 0:
             num *= char_prime[i]
-            list_char.append(i)
 
     return num
 
